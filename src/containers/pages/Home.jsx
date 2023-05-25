@@ -7,7 +7,7 @@ function Home(){
         <Layout>
             <Navbar/>
            <div className="pt-28">
-                Home
+                <h1 className="text-center text-9xl border pt-10 pb-10">Holiwi</h1>
             </div> 
             <Footer/>
         </Layout>

@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 import logo_bk3 from 'assets/img/cat-blackface3.png'
-
+import React  from 'react';
 const navigation = {
     solutions: [
       { name: 'Marketing', href: '#' },

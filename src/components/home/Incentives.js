@@ -1,3 +1,4 @@
+import React  from 'react';
 const incentives = [
   {
     name: 'Free shipping',

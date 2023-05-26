@@ -4,6 +4,7 @@ import {useState, Fragment, useEffect } from 'react'
 import logo_bk from 'assets/img/cat-blackface.png'
 import logo_ot2 from 'assets/img/cat-outline2.png'
 import DotLoader from 'react-spinners/DotLoader'
+import React  from 'react';
 
 function Navbar() {
     

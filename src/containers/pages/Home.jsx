@@ -3,7 +3,7 @@ import Navbar from "components/navigation/Navbar";
 import Footer from "components/navigation/Footer";
 import Layout from "hocs/layouts/Layout";
 import Incentives from "components/home/Incentives";
-
+import React  from 'react';
 function Home(){
     return(
         <Layout>

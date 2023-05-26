@@ -1,4 +1,5 @@
 import { Typewriter } from 'react-simple-typewriter'
+import React  from 'react';
 function Header(){
     return(
         <main>

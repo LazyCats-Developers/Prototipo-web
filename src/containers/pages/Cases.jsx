@@ -1,13 +1,15 @@
+import React  from 'react';
 import Navbar from "components/navigation/Navbar";
 import Footer from "components/navigation/Footer";
 import Layout from "hocs/layouts/Layout";
-import React  from 'react';
+import Header from 'components/cases/Header';
+
 function Cases(){
     return(
         <Layout>
             <Navbar/>
-           <div className="pt-28">
-           Cases
+            <div className="pt-28">
+                <Header/>
             </div> 
             <Footer/>
         </Layout>

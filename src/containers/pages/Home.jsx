@@ -1,9 +1,14 @@
+import React  from 'react';
 import Header from "components/home/Header";
 import Navbar from "components/navigation/Navbar";
 import Footer from "components/navigation/Footer";
 import Layout from "hocs/layouts/Layout";
 import Incentives from "components/home/Incentives";
-import React  from 'react';
+import UseCases from "components/home/UseCases";
+import Features from "components/home/Feature";
+import CTA from "components/home/CTA";
+import LogoCloud from 'components/home/LogoCloud';
+import BlogList from 'components/home/BlogList';
 function Home(){
     return(
         <Layout>
@@ -11,6 +16,11 @@ function Home(){
             <div className="pt-28">
                     <Header/>
                     <Incentives/>
+                    <UseCases/>
+                    <Features/>
+                    <CTA/>
+                    <LogoCloud/>
+                    <BlogList/>
             </div> 
             <Footer/>
         </Layout>

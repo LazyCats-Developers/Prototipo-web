@@ -10,7 +10,7 @@ function Header(){
                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
                   Realizamos tus<span> </span>
                     <Typewriter
-                        words={['ideas', 'metas', 'sueños']}
+                        words={['ideas.', 'metas.', 'sueños.']}
                         loop={0}
                         cursor
                         cursorStyle='_'

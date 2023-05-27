@@ -278,4 +278,6 @@ psd
 thumb
 sketch
 
+package-lock
+
 # End of https://www.toptal.com/developers/gitignore/api/django,react,python

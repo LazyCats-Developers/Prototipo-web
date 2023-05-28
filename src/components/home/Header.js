@@ -4,10 +4,10 @@ function Header(){
     return(
       <main>
       <div className="relative px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+        <div className="mx-auto max-w-3xl xl:pt-40 xl:pb-64 lg:pt-56 lg:pb-48 pt-24 pb-12">
           <div>
             <div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight pb-24 sm:text-center sm:text-7xl">
                 Realizamos tus<span> </span>
                   <Typewriter
                       words={['ideas', 'metas', 'sueños']}

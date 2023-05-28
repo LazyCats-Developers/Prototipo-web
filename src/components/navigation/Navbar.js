@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+
 import { Link } from 'react-router-dom'
 import {useState, Fragment, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
@@ -23,6 +24,7 @@ function Navbar() {
     }
 
     return (
+
         <nav id='navbar' className='w-full py-6 top-0 transition duration-200 ease-in-out z-40 shadow-navbar fixed'>
         <div className="px-4 sm:px-6">
             <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
@@ -49,6 +51,7 @@ function Navbar() {
                         Hire us
                         <DotLoader className="ml-3 -mr-1 h-5 w-5" loading={loading} size={15} color='#ffffff'/>
                     </Link>
+
                 </div>
             </div>
         </div>

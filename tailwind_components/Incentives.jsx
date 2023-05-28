@@ -1,4 +1,3 @@
-
 const incentives = [
     {
       name: 'Free shipping',
@@ -18,9 +17,9 @@ const incentives = [
     },
   ]
   
-  export default function Incentives() {
+  export default function Example() {
     return (
-      <div className="bg-white"> 
+      <div className="bg-white">
         <div className="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
             <div className="max-w-3xl">
@@ -51,4 +50,3 @@ const incentives = [
       </div>
     )
   }
-

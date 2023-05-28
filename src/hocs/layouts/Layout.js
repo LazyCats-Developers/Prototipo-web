@@ -1,4 +1,7 @@
 import { connect } from 'react-redux';
+import React  from 'react';
+import PropTypes from 'prop-types';
+
 
 
 function Layout({children}){
@@ -8,7 +11,9 @@ function Layout({children}){
         </div>
     )
 }
-
+Layout.propTypes = {
+    children:PropTypes.element
+}
 const mapStateToProp = state =>({
 
 })

@@ -6,7 +6,7 @@ function Header(){
           <div>
             <div>
               <h1 className="text-4xl font-semibold tracking-tight pb-16  sm:text-7xl">
-                Carousel Cases
+                Productos
               </h1>
               <p className="mt-16 text-2xl max-w-3xl leading-8 text-black">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt

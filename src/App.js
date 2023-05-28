@@ -10,6 +10,7 @@ import About from "containers/pages/About";
 import Careers from "containers/pages/Careers";
 import Blog from "containers/pages/Blog";
 import Contact from "containers/pages/Contact";
+import Products from "containers/pages/Products";
 
 
 
@@ -30,6 +31,7 @@ function App() {
               <Route path="/carreras" element={<Careers />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contacto" element={<Contact />} />
+              <Route path="/products" element={<Products />} />
           </Routes>
       </Router>
     </Provider>

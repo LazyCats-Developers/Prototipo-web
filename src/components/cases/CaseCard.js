@@ -1,22 +1,8 @@
 function CaseCard({data,index}) {
     return(
-        <div
-        onMouseEnter={()=>{
-            const title_element = document.getElementById(index)
-            title_element.classList.add('text-orange-500')
-            const img = document.getElementById(index)
-            img.classList.add('object-scale-down')
-        }}
-        onMouseLeave={()=>{
-            const title_element = document.getElementById(index)
-            title_element.classList.remove('text-orange-500')
-            const img = document.getElementById(index)
-            img.classList.remove('object-scale-down')
-        }}
-
-        className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+        <div className="group flex flex-col overflow-hidden rounded-lg shadow-lg">
         <div className="flex-shrink-0">
-          <img id={data} className="h-96 w-full object-cover" src={data.imageUrl} alt="" />
+          <img id={data} className="h-96 w-full object-cover group-hover:object-scale-down group-hover:transition hover:duration-300 hover:ease-in-out" src={data.imageUrl} alt="" />
         </div>
         <div className="flex flex-1 flex-col justify-between bg-white p-6">
           <div className="flex-1">
@@ -26,7 +12,7 @@ function CaseCard({data,index}) {
               </a>
             </p>
             <a href={data.href} className="mt-2 block">
-              <p id={index} className="lg:text-4xl pt-4 pb-6 text-2xl font-semibold transition duration-500 ease-in-out text-gray-900">{data.title}</p>
+              <p id={index} className="lg:text-4xl pt-4 pb-6 text-2xl font-semibold transition duration-100 ease-in-out text-gray-900 group-hover:text-orange-500">{data.title}</p>
               <p className="mt-3 text-2xl space-y-2 leading-9 text-gray-500">{data.description}</p>
             </a>
           </div>

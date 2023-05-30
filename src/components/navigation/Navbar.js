@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import {useState, Fragment, useEffect } from 'react'
+import {useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import logo_bk from 'assets/img/cat-blackface.png'
-import logo_ot2 from 'assets/img/cat-outline2.png'
+
 import DotLoader from 'react-spinners/DotLoader'
 function Navbar() {
 
@@ -41,7 +41,6 @@ function Navbar() {
                     <NavLink to='/nosotros' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-orange-500 transition duration-300 ease-in-out mx-4">Nosotros</NavLink>
                     <NavLink to='/carreras' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-orange-500 transition duration-300 ease-in-out mx-4">Carreras</NavLink>
                     <NavLink to='/blog' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-orange-500 transition duration-300 ease-in-out mx-4">Blog</NavLink>
-                    <NavLink to='/contacto' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-orange-500 transition duration-300 ease-in-out mx-4">Contacto</NavLink>
                     <Link
                         to="/contacto"
                         type="button"

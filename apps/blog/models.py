@@ -8,7 +8,17 @@ def blog_thumbnail_directory(instance, filename):
     
 # Create your models here.
 
+
 class Post(models.Model):
+    
+    class PostObjects(models.Manager):
+        def get_queryset(self):
+            return super().get_queryset().filter(status='published')
+    options = (
+        ('draft', 'Draft'),
+        ('published', 'Published'),
+    )
+    
     title = models.CharField(max_length=255)
     time_read = models.IntegerField()
     
@@ -21,7 +31,11 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
     published = models.DateTimeField(default=timezone.now)
     
+    status = models.CharField(max_length=10, choices=options, default='draft')
     views = models.IntegerField(default=0, blank=True)
+    
+    objects =           models.Manager()  # default manager
+    postobjects =       PostObjects()  # custom manager
     
     class Meta:
         ordering= ('-published', )

@@ -19,11 +19,10 @@ class BlogListView(APIView):
     def get(self, request ,format=None):
         if Post.postobjects.all().exists():
             
-            post = Post.postobjects.order_by('-published').all()
+            posts = Post.postobjects.order_by('-published').all()
             
             paginator = SmallSetPagination()
-            result = paginator.paginate_queryset(post, request)
-            
+            result = paginator.paginate_queryset(posts, request)
             serializer = PostListSerializer(result, many=True)
             
             return paginator.get_paginated_response({'post': serializer.data})
@@ -63,7 +62,7 @@ class ListPostByCategoryView(APIView):
             serializer = PostListSerializer(results, many=True)
             
             
-            return paginator.get_paginated_response({'posts': serializer.data})
+            return paginator.get_paginated_response({'post': serializer.data})
         else:
             return Response({'error': 'No Post found'}, status=status.HTTP_404_NOT_FOUND)
         
@@ -97,9 +96,10 @@ class SearchBlogView(APIView):
         matches = Post.postobjects.filter(
             Q(title__icontains=search_term) |
             Q(description__icontains=search_term) |
+            Q(content__icontains=search_term) |
             Q(category__name__icontains=search_term)
         )
-        paginator = LargeSetPagination()
+        paginator = SmallSetPagination()
         result = paginator.paginate_queryset(matches, request)
         
         serializer = PostListSerializer(result, many=True)

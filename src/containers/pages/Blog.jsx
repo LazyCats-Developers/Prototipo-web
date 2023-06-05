@@ -34,8 +34,8 @@ function Blog({
 
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-                    <div className="mx-auto max-w-6xl mt-8">
-                        <BlogList posts={posts&&posts}/>
+                    <div className="mx-auto max-w-6xl my-10">
+                        <BlogList posts={posts&&posts} get_blog_list_page={get_blog_list_page} count={count&&count}/>
                     </div>
 
                 </div>

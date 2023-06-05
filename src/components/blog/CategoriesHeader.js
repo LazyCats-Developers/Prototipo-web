@@ -32,8 +32,8 @@ function CategoriesHeader({ categories }) {
                                         All
                                     </Link>
                                     {
-                                        categories && categories.map(category => (
-                                            <Link to={`/category/${category.slug}`} className={`${location.pathname === `/category/${category.slug}` ?"text-orange-500 bg-white " : "text-gray-900 hover:text-orange-500 border border-gray-100 hover:border-gray-200"} 
+                                        categories && categories.map((category, index) => (
+                                            <Link key={index} to={`/category/${category.slug}`} className={`${location.pathname === `/category/${category.slug}` ?"text-orange-500 bg-white " : "text-gray-900 hover:text-orange-500 border border-gray-100 hover:border-gray-200"} 
                                                 inline-flex flex-col text-center lg:w-auto py-2 px-6 rounded-md text-lg font-regular`}>
                                                 {category.name}
                                             </Link>

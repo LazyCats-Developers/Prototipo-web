@@ -172,7 +172,7 @@ export const search_blog_page = (search_term, page) => async dispatch => {
         }
     };
     try{
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/blog/search?s=${search_term}&p=${page}`, config)
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/blog/search?p=${page}&s=${search_term}`, config)
 
         if(res.status === 200){
             dispatch({

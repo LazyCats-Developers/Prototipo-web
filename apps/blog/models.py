@@ -2,6 +2,10 @@ from django.db import models
 from apps.category.models import Category
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+import uuid
+from django.conf import settings
+
+User = settings.AUTH_USER_MODEL
 
 def blog_thumbnail_directory(instance, filename):
     return 'blog/{0}/{1}'.format(instance.title, filename)
@@ -17,18 +21,21 @@ class Post(models.Model):
     options = (
         ('draft', 'Draft'),
         ('published', 'Published'),
+        ('delete', 'Delete')
     )
     
-    title = models.CharField(max_length=255)
-    time_read = models.IntegerField()
+    title = models.CharField(max_length=255, default='')
+    time_read = models.IntegerField(blank=True, null=True)
     
-    description = models.TextField(max_length=255)
-    content = RichTextField()
+    description = models.TextField(max_length=255, default='')
+    content = RichTextField(default='')
     
-    slug = models.SlugField(max_length=255, unique=True)
-    thumbnail = models.ImageField(upload_to=blog_thumbnail_directory, max_length=500)
+    slug = models.SlugField(max_length=255, unique=True, default=uuid.uuid4)
+    thumbnail = models.ImageField(upload_to=blog_thumbnail_directory, max_length=500, blank=True, null=True)
     
-    category = models.ForeignKey(Category, on_delete=models.PROTECT)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, blank=True, null=True)
     published = models.DateTimeField(default=timezone.now)
     
     status = models.CharField(max_length=10, choices=options, default='draft')

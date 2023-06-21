@@ -27,7 +27,7 @@ function PostDetail({
                             <div className="absolute inset-0">
                                 <img
                                     className="h-full w-full object-cover"
-                                    src={post.thumbnail}
+                                    src={`http://localhost:8000${post.thumbnail}`}
                                     alt=""
                                 />
                                 <div className="absolute inset-0 bg-gray-200 mix-blend-multiply" aria-hidden="true" />

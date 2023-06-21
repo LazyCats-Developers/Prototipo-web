@@ -187,7 +187,7 @@ class PublishBlogPostView(APIView):
         slug = data['slug']
         post = Post.objects.get(slug=slug)
         post.status = 'published'
-        post.published=timezone.now
+        post.published=timezone.now()
         post.save()
         return Response({'success': 'Post published'})
     

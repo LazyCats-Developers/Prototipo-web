@@ -6,18 +6,18 @@ import Header from "components/products/Header";
 import CasesList from "components/products/CasesList";
 
 
-function Products(){
-    useEffect(()=> {
-        window.scrollTo(0,0)
-    },[])
-    return(
+function Products() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    return (
         <Layout>
-            <Navbar/>
-           <div className="pt-28">
-                <Header/>
-                <CasesList/>
-            </div> 
-            <Footer/>
+            <Navbar />
+            <div className="pt-28">
+                <Header />
+                <CasesList />
+            </div>
+            <Footer />
         </Layout>
     )
 }
